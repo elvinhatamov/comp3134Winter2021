@@ -1,0 +1,11 @@
+<html>
+<div>
+    <head>
+        <title>Simple example</title>
+    </head>
+    <body>
+        <textfield>You just wrote `echo HTML` file with $SHELL as user ${USER}!</textfield>
+<button>submit<button>
+    </body>
+</div>
+</html>

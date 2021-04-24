@@ -1,0 +1,255 @@
+
+Welcome to DigitalOcean's 1-Click LAMP Droplet.
+To keep this Droplet secure, the UFW firewall is enabled.
+All ports are BLOCKED except 22 (SSH), 80 (HTTP), and 443 (HTTPS).
+
+In a web browser, you can view:
+ * The LAMP 1-Click Quickstart guide: https://do.co/3gY97ha#start
+ * Your LAMP website: http://143.198.32.109
+
+On the server:
+ * The default web root is located at /var/www/html
+ * The MySQL root password is saved in /root/.digitalocean_password
+ * Certbot is preinstalled. Run it to configure HTTPS. See
+   https://do.co/3gY97ha#enable-https for more detail.
+
+For help and more information, visit https://do.co/3gY97ha
+
+********************************************************************************
+To delete this message of the day: rm -rf /etc/update-motd.d/99-one-click
+Last login: Sat Apr 24 19:26:50 2021 from 99.239.40.71
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# cd /var/www/html
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# apt install hping3
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following NEW packages will be installed:
+  hping3
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 107 kB of archives.
+After this operation, 267 kB of additional disk space will be used.
+Get:1 http://mirrors.digitalocean.com/ubuntu focal/universe amd64 hping3 amd64 3.a2.ds2-9 [107 kB]
+Fetched 107 kB in 0s (810 kB/s)
+Selecting previously unselected package hping3.
+(Reading database ... 98050 files and directories currently installed.)
+Preparing to unpack .../hping3_3.a2.ds2-9_amd64.deb ...
+Unpacking hping3 (3.a2.ds2-9) ...
+Setting up hping3 (3.a2.ds2-9) ...
+Processing triggers for man-db (2.9.1-1) ...
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# hping3 -h or hping3 –help
+usage: hping3 host [options]
+  -h  --help      show this help
+  -v  --version   show version
+  -c  --count     packet count
+  -i  --interval  wait (uX for X microseconds, for example -i u1000)
+      --fast      alias for -i u10000 (10 packets for second)
+      --faster    alias for -i u1000 (100 packets for second)
+      --flood      sent packets as fast as possible. Don't show replies.
+  -n  --numeric   numeric output
+  -q  --quiet     quiet
+  -I  --interface interface name (otherwise default routing interface)
+  -V  --verbose   verbose mode
+  -D  --debug     debugging info
+  -z  --bind      bind ctrl+z to ttl           (default to dst port)
+  -Z  --unbind    unbind ctrl+z
+      --beep      beep for every matching packet received
+Mode
+  default mode     TCP
+  -0  --rawip      RAW IP mode
+  -1  --icmp       ICMP mode
+  -2  --udp        UDP mode
+  -8  --scan       SCAN mode.
+                   Example: hping --scan 1-30,70-90 -S www.target.host
+  -9  --listen     listen mode
+IP
+  -a  --spoof      spoof source address
+  --rand-dest      random destionation address mode. see the man.
+  --rand-source    random source address mode. see the man.
+  -t  --ttl        ttl (default 64)
+  -N  --id         id (default random)
+  -W  --winid      use win* id byte ordering
+  -r  --rel        relativize id field          (to estimate host traffic)
+  -f  --frag       split packets in more frag.  (may pass weak acl)
+  -x  --morefrag   set more fragments flag
+  -y  --dontfrag   set don't fragment flag
+  -g  --fragoff    set the fragment offset
+  -m  --mtu        set virtual mtu, implies --frag if packet size > mtu
+  -o  --tos        type of service (default 0x00), try --tos help
+  -G  --rroute     includes RECORD_ROUTE option and display the route buffer
+  --lsrr           loose source routing and record route
+  --ssrr           strict source routing and record route
+  -H  --ipproto    set the IP protocol field, only in RAW IP mode
+ICMP
+  -C  --icmptype   icmp type (default echo request)
+  -K  --icmpcode   icmp code (default 0)
+      --force-icmp send all icmp types (default send only supported types)
+      --icmp-gw    set gateway address for ICMP redirect (default 0.0.0.0)
+      --icmp-ts    Alias for --icmp --icmptype 13 (ICMP timestamp)
+      --icmp-addr  Alias for --icmp --icmptype 17 (ICMP address subnet mask)
+      --icmp-help  display help for others icmp options
+UDP/TCP
+  -s  --baseport   base source port             (default random)
+  -p  --destport   [+][+]<port> destination port(default 0) ctrl+z inc/dec
+  -k  --keep       keep still source port
+  -w  --win        winsize (default 64)
+  -O  --tcpoff     set fake tcp data offset     (instead of tcphdrlen / 4)
+  -Q  --seqnum     shows only tcp sequence number
+  -b  --badcksum   (try to) send packets with a bad IP checksum
+                   many systems will fix the IP checksum sending the packet
+                   so you'll get bad UDP/TCP checksum instead.
+  -M  --setseq     set TCP sequence number
+  -L  --setack     set TCP ack
+  -F  --fin        set FIN flag
+  -S  --syn        set SYN flag
+  -R  --rst        set RST flag
+  -P  --push       set PUSH flag
+  -A  --ack        set ACK flag
+  -U  --urg        set URG flag
+  -X  --xmas       set X unused flag (0x40)
+  -Y  --ymas       set Y unused flag (0x80)
+  --tcpexitcode    use last tcp->th_flags as exit code
+  --tcp-mss        enable the TCP MSS option with the given value
+  --tcp-timestamp  enable the TCP timestamp option to guess the HZ/uptime
+Common
+  -d  --data       data size                    (default is 0)
+  -E  --file       data from file
+  -e  --sign       add 'signature'
+  -j  --dump       dump packets in hex
+  -J  --print      dump printable characters
+  -B  --safe       enable 'safe' protocol
+  -u  --end        tell you when --file reached EOF and prevent rewind
+  -T  --traceroute traceroute mode              (implies --bind and --ttl 1)
+  --tr-stop        Exit when receive the first not ICMP in traceroute mode
+  --tr-keep-ttl    Keep the source TTL fixed, useful to monitor just one hop
+  --tr-no-rtt       Don't calculate/show RTT information in traceroute mode
+ARS packet description (new, unstable)
+  --apd-send       Send the packet described with APD (see docs/APD.txt)
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# ^C
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# touch  directory_traversal_part1.php
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# cd ^C
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# cd ^C
+-bash: cd: $'\003': No such file or directory
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# cd directory_traversal_part1.php
+-bash: cd: directory_traversal_part1.php: Not a directory
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# cd /^C
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# cd/directory_traversal_part1.php
+-bash: cd/directory_traversal_part1.php: No such file or directory
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# mkdir directory_traversal_part1.php
+mkdir: cannot create directory ‘directory_traversal_part1.php’: File exists
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# touch directory_traversal_part1.php
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# cd
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# ^C
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# touch directory_travers^C
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# touch directory_traversal_part1.php
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# cd/touch directory_traversal_part1.php
+-bash: cd/touch: No such file or directory
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# cd/directory_traversal_part1.php
+-bash: cd/directory_traversal_part1.php: No such file or directory
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# lynx http://httpd.apache.org/download.cgi
+
+Command 'lynx' not found, but can be installed with:
+
+apt install lynx
+
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# ^C
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# apt install lynx
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  libidn11 lynx-common
+The following NEW packages will be installed:
+  libidn11 lynx lynx-common
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1586 kB of archives.
+After this operation, 5731 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://mirrors.digitalocean.com/ubuntu focal/main amd64 libidn11 amd64 1.33-2.2ubuntu2 [46.2 kB]
+Get:2 http://mirrors.digitalocean.com/ubuntu focal/universe amd64 lynx-common all 2.9.0dev.5-1 [914 kB]
+Get:3 http://mirrors.digitalocean.com/ubuntu focal/universe amd64 lynx amd64 2.9.0dev.5-1 [626 kB]
+Fetched 1586 kB in 0s (9735 kB/s)
+Selecting previously unselected package libidn11:amd64.
+(Reading database ... 98080 files and directories currently installed.)
+Preparing to unpack .../libidn11_1.33-2.2ubuntu2_amd64.deb ...
+Unpacking libidn11:amd64 (1.33-2.2ubuntu2) ...
+Selecting previously unselected package lynx-common.
+Preparing to unpack .../lynx-common_2.9.0dev.5-1_all.deb ...
+Unpacking lynx-common (2.9.0dev.5-1) ...
+Selecting previously unselected package lynx.
+Preparing to unpack .../lynx_2.9.0dev.5-1_amd64.deb ...
+Unpacking lynx (2.9.0dev.5-1) ...
+Setting up libidn11:amd64 (1.33-2.2ubuntu2) ...
+Setting up lynx-common (2.9.0dev.5-1) ...
+Setting up lynx (2.9.0dev.5-1) ...
+update-alternatives: using /usr/bin/lynx to provide /usr/bin/www-browser (www-browser) in auto mode
+Processing triggers for libc-bin (2.31-0ubuntu9) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# lynx http://httpd.apache.org/download.cgi
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~#  gzip -d httpd-2_0_NN.tar.gz
+gzip: httpd-2_0_NN.tar.gz: No such file or directory
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# lynx http://httpd.apache.org/download.cgi
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~#
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# gzip -d httpd-2_0_NN.tar.gz
+gzip: httpd-2_0_NN.tar.gz: No such file or directory
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# lynx http://httpd.apache.org/download.cgi
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# cd /var/www/ directory_traversal_part1.php
+-bash: cd: too many arguments
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# ^C
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# cd /var/www/ directory_traversal_part1.php
+-bash: cd: too many arguments
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# cd/var/www/directory_traversal_part1.php
+-bash: cd/var/www/directory_traversal_part1.php: No such file or directory
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# cd /var/www/html
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# apt install software-properties-common
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+software-properties-common is already the newest version (0.98.9.2).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# add-apt-repository ppa:directory_traversal_part1.php
+Cannot add PPA: 'ppa:~directory_traversal_part1.php/ubuntu/ppa'.
+ERROR: '~directory_traversal_part1.php' user or team does not exist.
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html#  add-apt-repository ppa:elvin/php
+Cannot add PPA: 'ppa:~elvin/ubuntu/php'.
+The user named '~elvin' does not have any PPA
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# add-apt-repository ppa:ondrej/php
+ Co-installable PHP versions: PHP 5.6, PHP 7.x and most requested extensions are included. Only Supported Versions of PHP (http://php.net/supported-versions.php) for Supported Ubuntu Releases (https://wiki.ubuntu.com/Releases) are provided. Don't ask for end-of-life PHP versions or Ubuntu release, they won't be provided.
+
+Debian oldstable and stable packages are provided as well: https://deb.sury.org/#debian-dpa
+
+You can get more information about the packages at https://deb.sury.org
+
+IMPORTANT: The <foo>-backports is now required on older Ubuntu releases.
+
+BUGS&FEATURES: This PPA now has a issue tracker:
+https://deb.sury.org/#bug-reporting
+
+CAVEATS:
+1. If you are using php-gearman, you need to add ppa:ondrej/pkg-gearman
+2. If you are using apache2, you are advised to add ppa:ondrej/apache2
+3. If you are using nginx, you are advised to add ppa:ondrej/nginx-mainline
+   or ppa:ondrej/nginx
+
+PLEASE READ: If you like my work and want to give me a little motivation, please consider donating regularly: https://donate.sury.org/
+
+WARNING: add-apt-repository is broken with non-UTF-8 locales, see
+https://github.com/oerdnj/deb.sury.org/issues/56 for workaround:
+
+# LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
+ More info: https://launchpad.net/~ondrej/+archive/ubuntu/php
+Press [ENTER] to continue or Ctrl-c to cancel adding it.
+
+Get:1 http://mirrors.digitalocean.com/ubuntu focal InRelease [265 kB]
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]
+Get:3 http://ppa.launchpad.net/ondrej/php/ubuntu focal InRelease [23.9 kB]
+Get:4 http://mirrors.digitalocean.com/ubuntu focal-updates InRelease [114 kB]
+Get:5 http://mirrors.digitalocean.com/ubuntu focal-backports InRelease [101 kB]
+Get:6 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 Packages [91.8 kB]
+Get:7 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 Packages [947 kB]
+Get:8 http://mirrors.digitalocean.com/ubuntu focal-updates/main Translation-en [216 kB]
+Get:9 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 c-n-f Metadata [13.2 kB]
+Get:10 http://mirrors.digitalocean.com/ubuntu focal-updates/restricted amd64 Packages [207 kB]
+Get:11 http://mirrors.digitalocean.com/ubuntu focal-updates/restricted Translation-en [30.7 kB]
+Get:12 http://mirrors.digitalocean.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [436 B]
+Get:13 http://mirrors.digitalocean.com/ubuntu focal-updates/universe amd64 Pa

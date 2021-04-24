@@ -1,0 +1,1 @@
+Javascript code tries to deceive php.

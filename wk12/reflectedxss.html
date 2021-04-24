@@ -1,0 +1,30 @@
+<html>
+<div>
+    <head>
+        <title>Simple example</title>
+    </head>
+    <body>
+        <textfield>You just wrote `echo HTML` file with $SHELL as user ${USER}!</textfield>
+<button>submit<button>
+    </body>
+</div>
+</html>
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# ls
+csfr.php                       hello.php   reflectedxss.html
+directory_traversal_part1.php  index.html
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# ^C
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# reflectedxss.html
+reflectedxss.html: command not found
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html# cat>reflectedxss.html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple example</title>
+    </head>
+    <body>
+        <p>You just wrote `echo HTML` file with $SHELL as user ${USER}!</p>
+    </body>
+</html>
+^C
+^?^C
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html#

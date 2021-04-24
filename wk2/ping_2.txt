@@ -1,0 +1,13 @@
+Elvin@LAPTOP-83UP5EQV MINGW64 ~ (101150598)
+$ ping georgebrown.ca
+
+Pinging georgebrown.ca [99.79.139.11] with 32 bytes of data:
+Reply from 99.79.139.11: bytes=32 time=37ms TTL=48
+Reply from 99.79.139.11: bytes=32 time=35ms TTL=48
+Reply from 99.79.139.11: bytes=32 time=35ms TTL=48
+Reply from 99.79.139.11: bytes=32 time=34ms TTL=48
+
+Ping statistics for 99.79.139.11:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 34ms, Maximum = 37ms, Average = 35ms

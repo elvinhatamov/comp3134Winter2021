@@ -1,0 +1,23 @@
+root@ubuntu-s-1vcpu-1gb-intel-tor1-01:~# hping3 --rand-source -d 10000 138.197.146.201
+HPING 138.197.146.201 (eth0 138.197.146.201): NO FLAGS are set, 40 headers + 10000 data bytes
+len=40 ip=138.197.146.201 ttl=64 DF id=0 sport=0 flags=RA seq=0 win=0 rtt=7.0 ms
+len=40 ip=138.197.146.201 ttl=64 DF id=0 sport=0 flags=RA seq=1 win=0 rtt=6.9 ms
+len=40 ip=138.197.146.201 ttl=1 DF id=0 sport=0 flags=RA seq=2 win=0 rtt=6.6 ms
+len=40 ip=138.197.146.201 ttl=64 DF id=0 sport=0 flags=RA seq=3 win=0 rtt=6.5 ms
+len=40 ip=138.197.146.201 ttl=64 DF id=0 sport=0 flags=RA seq=4 win=0 rtt=6.3 ms
+len=40 ip=138.197.146.201 ttl=64 DF id=0 sport=0 flags=RA seq=5 win=0 rtt=6.1 ms
+len=40 ip=138.197.146.201 ttl=64 DF id=0 sport=0 flags=RA seq=6 win=0 rtt=6.0 ms
+len=40 ip=138.197.146.201 ttl=64 DF id=0 sport=0 flags=RA seq=7 win=0 rtt=5.8 ms
+len=40 ip=138.197.146.201 ttl=64 DF id=0 sport=0 flags=RA seq=8 win=0 rtt=5.6 ms
+len=40 ip=138.197.146.201 ttl=64 DF id=0 sport=0 flags=RA seq=9 win=0 rtt=5.5 ms
+len=40 ip=138.197.146.201 ttl=64 DF id=0 sport=0 flags=RA seq=10 win=0 rtt=5.3 ms
+len=40 ip=138.197.146.201 ttl=64 DF id=0 sport=0 flags=RA seq=11 win=0 rtt=5.1 ms
+len=40 ip=138.197.146.201 ttl=64 DF id=0 sport=0 flags=RA seq=12 win=0 rtt=5.0 ms
+len=40 ip=138.197.146.201 ttl=64 DF id=0 sport=0 flags=RA seq=13 win=0 rtt=4.8 ms
+len=40 ip=138.197.146.201 ttl=64 DF id=0 sport=0 flags=RA seq=14 win=0 rtt=4.6 ms
+len=40 ip=138.197.146.201 ttl=64 DF id=0 sport=0 flags=RA seq=15 win=0 rtt=4.4 ms
+^C
+--- 138.197.146.201 hping statistic ---
+16 packets transmitted, 16 packets received, 0% packet loss
+round-trip min/avg/max = 4.4/5.7/7.0 ms
+root@ubuntu-s-1vcpu-1gb-intel-tor1-01:~#

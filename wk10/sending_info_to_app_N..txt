@@ -1,0 +1,14 @@
+-bash: syntax error near unexpected token `newline'
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~/sending_info_to_app_1.php# </form>
+-bash: syntax error near unexpected token `newline'
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~/sending_info_to_app_1.php# php -a
+Interactive mode enabled
+
+php > <form method="get">
+php >  <input name="q" placeholder="Enter Text">
+php >  <br/>
+php >  <input type="submit" value="Go">
+php > </form>
+php >
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~/sending_info_to_app_1.php# php -l
+

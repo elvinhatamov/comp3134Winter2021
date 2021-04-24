@@ -1,0 +1,9 @@
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:/var/www/html/csfr_action.php# php -l
+<?php
+$file = 'example.txt';
+$newfile = 'example.txt.bak';
+
+if (!copy($file, $newfile)) {
+    echo "failed to copy $file...\n";
+}
+?>

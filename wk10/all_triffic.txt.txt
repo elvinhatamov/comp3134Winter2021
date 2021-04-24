@@ -1,0 +1,148 @@
+Elvin@LAPTOP-83UP5EQV MINGW64 ~ (main)
+$ ssh root@143.198.32.109
+The authenticity of host '143.198.32.109 (143.198.32.109)' can't be established.
+ECDSA key fingerprint is SHA256:gTgroKo1h45Jk9kIyzQ74rzfN3p6DTh5AYsiji+qpSQ.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '143.198.32.109' (ECDSA) to the list of known hosts.
+root@143.198.32.109's password:
+Permission denied, please try again.
+root@143.198.32.109's password:
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-42-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat Apr 24 19:04:07 UTC 2021
+
+  System load:  0.0               Users logged in:       0
+  Usage of /:   9.6% of 24.06GB   IPv4 address for eth0: 143.198.32.109
+  Memory usage: 54%               IPv4 address for eth0: 10.20.0.5
+  Swap usage:   0%                IPv4 address for eth1: 10.118.0.2
+  Processes:    115
+
+0 updates can be installed immediately.
+0 of these updates are security updates.
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+********************************************************************************
+
+Welcome to DigitalOcean's 1-Click LAMP Droplet.
+To keep this Droplet secure, the UFW firewall is enabled.
+All ports are BLOCKED except 22 (SSH), 80 (HTTP), and 443 (HTTPS).
+
+In a web browser, you can view:
+ * The LAMP 1-Click Quickstart guide: https://do.co/3gY97ha#start
+ * Your LAMP website: http://143.198.32.109
+
+On the server:
+ * The default web root is located at /var/www/html
+ * The MySQL root password is saved in /root/.digitalocean_password
+ * Certbot is preinstalled. Run it to configure HTTPS. See
+   https://do.co/3gY97ha#enable-https for more detail.
+
+For help and more information, visit https://do.co/3gY97ha
+
+********************************************************************************
+To delete this message of the day: rm -rf /etc/update-motd.d/99-one-click
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# client_loop: send disconnect: Connection reset by peer
+
+Elvin@LAPTOP-83UP5EQV MINGW64 ~ (main)
+$ ^C
+
+Elvin@LAPTOP-83UP5EQV MINGW64 ~ (main)
+$  ssh root@143.198.32.109
+root@143.198.32.109's password:
+Permission denied, please try again.
+root@143.198.32.109's password:
+Permission denied, please try again.
+root@143.198.32.109's password:
+root@143.198.32.109: Permission denied (publickey,password).
+
+Elvin@LAPTOP-83UP5EQV MINGW64 ~ (main)
+$ ssh root@143.198.32.109
+root@143.198.32.109's password:
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-42-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat Apr 24 19:26:49 UTC 2021
+
+  System load:  0.0               Users logged in:       1
+  Usage of /:   9.6% of 24.06GB   IPv4 address for eth0: 143.198.32.109
+  Memory usage: 54%               IPv4 address for eth0: 10.20.0.5
+  Swap usage:   0%                IPv4 address for eth1: 10.118.0.2
+  Processes:    115
+
+0 updates can be installed immediately.
+0 of these updates are security updates.
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+********************************************************************************
+
+Welcome to DigitalOcean's 1-Click LAMP Droplet.
+To keep this Droplet secure, the UFW firewall is enabled.
+All ports are BLOCKED except 22 (SSH), 80 (HTTP), and 443 (HTTPS).
+
+In a web browser, you can view:
+ * The LAMP 1-Click Quickstart guide: https://do.co/3gY97ha#start
+ * Your LAMP website: http://143.198.32.109
+
+On the server:
+ * The default web root is located at /var/www/html
+ * The MySQL root password is saved in /root/.digitalocean_password
+ * Certbot is preinstalled. Run it to configure HTTPS. See
+   https://do.co/3gY97ha#enable-https for more detail.
+
+For help and more information, visit https://do.co/3gY97ha
+
+********************************************************************************
+To delete this message of the day: rm -rf /etc/update-motd.d/99-one-click
+Last login: Sat Apr 24 19:04:10 2021 from 99.239.40.176
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# ping 143.198.32.109
+PING 143.198.32.109 (143.198.32.109) 56(84) bytes of data.
+64 bytes from 143.198.32.109: icmp_seq=1 ttl=64 time=0.112 ms
+64 bytes from 143.198.32.109: icmp_seq=2 ttl=64 time=0.116 ms
+64 bytes from 143.198.32.109: icmp_seq=3 ttl=64 time=0.124 ms
+64 bytes from 143.198.32.109: icmp_seq=4 ttl=64 time=0.109 ms
+64 bytes from 143.198.32.109: icmp_seq=5 ttl=64 time=0.113 ms
+64 bytes from 143.198.32.109: icmp_seq=6 ttl=64 time=0.113 ms
+64 bytes from 143.198.32.109: icmp_seq=7 ttl=64 time=0.124 ms
+64 bytes from 143.198.32.109: icmp_seq=8 ttl=64 time=0.135 ms
+64 bytes from 143.198.32.109: icmp_seq=9 ttl=64 time=0.121 ms
+64 bytes from 143.198.32.109: icmp_seq=10 ttl=64 time=0.112 ms
+64 bytes from 143.198.32.109: icmp_seq=11 ttl=64 time=0.103 ms
+64 bytes from 143.198.32.109: icmp_seq=12 ttl=64 time=0.106 ms
+64 bytes from 143.198.32.109: icmp_seq=13 ttl=64 time=0.135 ms
+64 bytes from 143.198.32.109: icmp_seq=14 ttl=64 time=0.110 ms
+64 bytes from 143.198.32.109: icmp_seq=15 ttl=64 time=0.124 ms
+64 bytes from 143.198.32.109: icmp_seq=16 ttl=64 time=0.084 ms
+64 bytes from 143.198.32.109: icmp_seq=17 ttl=64 time=0.100 ms
+64 bytes from 143.198.32.109: icmp_seq=18 ttl=64 time=0.125 ms
+64 bytes from 143.198.32.109: icmp_seq=19 ttl=64 time=0.113 ms
+64 bytes from 143.198.32.109: icmp_seq=20 ttl=64 time=0.123 ms
+64 bytes from 143.198.32.109: icmp_seq=21 ttl=64 time=0.112 ms
+64 bytes from 143.198.32.109: icmp_seq=22 ttl=64 time=0.095 ms
+64 bytes from 143.198.32.109: icmp_seq=23 ttl=64 time=0.129 ms
+64 bytes from 143.198.32.109: icmp_seq=24 ttl=64 time=0.096 ms
+64 bytes from 143.198.32.109: icmp_seq=25 ttl=64 time=0.128 ms
+64 bytes from 143.198.32.109: icmp_seq=26 ttl=64 time=0.120 ms
+64 bytes from 143.198.32.109: icmp_seq=27 ttl=64 time=0.099 ms
+64 bytes from 143.198.32.109: icmp_seq=28 ttl=64 time=0.118 ms
+64 bytes from 143.198.32.109: icmp_seq=29 ttl=64 time=0.088 ms
+64 bytes from 143.198.32.109: icmp_seq=30 ttl=64 time=0.094 ms
+64 bytes from 143.198.32.109: icmp_seq=31 ttl=64 time=0.130 ms
+64 bytes from 143.198.32.109: icmp_seq=32 ttl=64 time=0.123 ms
+64 bytes from 143.198.32.109: icmp_seq=33 ttl=64 time=0.103 ms
+64 bytes from 143.198.32.109: icmp_seq=34 ttl=64 time=0.123 ms
+64 bytes from 143.198.32.109: icmp_seq=35 ttl=64 time=0.106 ms
+64 bytes from 143.198.32.109: icmp_seq=36 ttl=64 time=0.111 ms
+64 bytes from 143.198.32.109: icmp_seq=37 ttl=64 time=0.104 m

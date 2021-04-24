@@ -1,0 +1,2 @@
+This php script shows files on the directory which is not goog for security, hacker may attempt to use/change existing php files.
+Error is because no directory exists named hello.
